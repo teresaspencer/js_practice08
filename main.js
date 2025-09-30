@@ -76,6 +76,15 @@ const myDessert = new Pie();
 // Hint: Look at this week's image for Factory Functions
 ////////
 // Use iceCreamFactory to instantiate an object named myScoop.
+function iceCreamFactory(iceCreamFlavor) {
+    const flavor = iceCreamFlavor;
+    const cone = "waffle";
+    return {
+        cone,
+        serve: () => `Here's your ${flavor} ice cream in a ${cone} cone.`
+    };
+}
+const myScoop = iceCreamFactory("Chocolate");
 
 // 5) Using a literal (not a class or function), define an object
 // named "webDev" that has the following key-value pairs:
