@@ -14,6 +14,13 @@ given in the comments.
 // the constructor and a method named "rolling" that returns a string
 // equal to "Rolling down the highway on {wheels value} wheels."
 // Use the class to instantiate a new object named myRide.
+class Vehicle {
+    wheels = 4;
+    rolling() {
+        return `Rolling down the highway on ${this.wheels} wheels.`;
+    }
+}
+let myRide = new Vehicle();
 
 // 2) Define a "Car" subclass based on the parent class "Vehicle".
 // The "Car" class should also accept a parameter "carDoors". The
@@ -22,12 +29,37 @@ given in the comments.
 // that returns a string equal to "My car has {doors value} doors and
 // {wheels value} wheels."
 // Use the "Car" class to instantiate a new object named myCruiser.
+class Car extends Vehicle {
+    doors;
+    constructor(carDoors, wheels) {
+        super(wheels);
+        this.doors = carDoors;
+    }
+    doorsAndWheels() {
+        return `My car has ${this.doors} doors and ${this.wheels} wheels.`;
+    }
+}
+let myCruiser = new Car();
 
 // 3) Define a "Pie" class with the properties "flavor" and "slices".
 // Set the "flavor" property equal to a parameter named "pieFlavor".
 // Set the "slices" property equal to 8. Add a "getSlices" method
 // and a "setSlices" method that function as expected.
 // Use the "Pie" class to instantiate a new object named myDessert
+class Pie {
+    flavor;
+    slices = 8;
+    constructor(pieFlavor) {
+        this.flavor = pieFlavor; 
+    }
+    getSlices() {
+        return this.slices;
+    }
+    setSlices(slices) {
+        this.slices = slices;
+    }
+}
+let myDessert = new Pie();
 
 // 4) Define a Factory Function named "iceCreamFactory" that
 // accepts a "iceCreamFlavor" parameter.
