@@ -94,3 +94,13 @@ const myScoop = iceCreamFactory("Chocolate");
 // data in a variable named sendJSON.
 // Now convert the sendJSON data back to an object
 // named receiveJSON.
+const webDev = {
+    foundation: "html",
+    design: "css",
+    logic: "javascript",
+    build: function() {
+        return "building..."
+    }
+};
+const sendJSON = JSON.stringify(webDev);
+const receiveJSON = JSON.parse(sendJSON);
